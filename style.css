@@ -1,3 +1,8 @@
+html {
+    transform: scale(0.75);
+    transform-origin: 0 0;
+    width: 133.33%;
+}
 
 body {
     display: flex;
