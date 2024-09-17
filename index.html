@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=0.75" />
     <title>Happy Birthday</title>
-    <!-- CSS -->
+    
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
@@ -38,9 +38,9 @@
         const card = document.querySelector('.birthdayCard');
         const audio = document.getElementById('voiceMessage');
 
-        // Check if the card and audio element exist
+        // 1st i've checked the audio whether it's there or not.
         if (!card || !audio) {
-            console.error('Card or audio element not found.');
+            console.error('Audio element not found.');
             return;
         }
 
@@ -54,23 +54,20 @@
         // Pause and reset audio when the cursor leaves the card
         card.addEventListener('mouseleave', () => {
             audio.pause();
-            audio.currentTime = 0; // Optional: Reset playback to start
+            audio.currentTime = 0; //  Reset playback to start
         });
     });
 </script>
 
 
 <!-- <script>
-    // Play audio when the card is hovered over
     document.querySelector('.birthdayCard').addEventListener('mouseenter', () => {
         document.getElementById('voiceMessage').play();
     });
-
-    // Pause and reset audio when the cursor leaves the card
     document.querySelector('.birthdayCard').addEventListener('mouseleave', () => {
         const audio = document.getElementById('voiceMessage');
         audio.pause();
-        audio.currentTime = 0; // Optional: Reset playback to start
+        audio.currentTime = 0;
     });
 </script> -->
 </body>
